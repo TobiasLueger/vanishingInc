@@ -1,3 +1,4 @@
+import Navigation from '@/components/Navigation/Navigation'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -16,8 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <main>
+      <body className={`${inter.className} px-[6rem]`}>
+        <Navigation />
+        <main className='flex flex-col items-center justify-between'>
           {children}
         </main>
         
